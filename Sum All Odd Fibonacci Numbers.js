@@ -25,20 +25,13 @@ function sumFibs(num) {
 
   // filter out the odd numbers using array.filter
 
-  var filteredFib = fibArray.filter(function(num) {
-    return num % 2 == 1;
-  } );
-
+  var filteredFib = fibArray.filter((num) => num % 2 == 1);
+ 
   // for loop to sum of the numbers in the filteredFib array, then return sum
 
-  var sum = 0;
-
-  for (var i = 0; i < filteredFib.length; i++) {
-    sum = sum + filteredFib[i];
-  }
+  var sum = filteredFib.reduce((total, num) => total + num);
 
   return sum;
-
 }
 
 sumFibs(1000);
