@@ -28,14 +28,8 @@ function myReplace(str, before, after) {
     
     //if a letter uppercased equals original letter, then it was already uppercased, so make after letter uppercased too & viceversa
 
-    if (beforeArray[0].toUpperCase() == beforeArray[0]) {
-        afterArray[0] = afterArray[0].toUpperCase();
-    }
-
-    if (beforeArray[0].toLowerCase() == beforeArray[0]) {
-        afterArray[0] = afterArray[0].toLowerCase();
-    }
-
+    beforeArray[0].toUpperCase() == beforeArray[0] ? afterArray[0] = afterArray[0].toUpperCase() : afterArray[0] = afterArray[0].toLowerCase();
+    
     //find index of before word, and change it to afterStr & return joined array
 
     var index = array.indexOf(before);
